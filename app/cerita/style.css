@@ -1,0 +1,37 @@
+
+.container-pattren {
+  position: fixed; 
+  top: 25%;
+  left: 25%;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pattren {
+  position: absolute;
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(100px); 
+  animation: berubah 12s linear infinite;
+  opacity: 0.5; 
+}
+
+.pattren:nth-child(2) { animation-delay: 2s; }
+.pattren:nth-child(3) { animation-delay: 4s; }
+.pattren:nth-child(4) { animation-delay: 6s; }
+.pattren:nth-child(5) { animation-delay: 8s; } 
+.pattren:nth-child(6) { animation-delay: 4s; } 
+.pattren:nth-child(7) { animation-delay: 2s; } 
+
+
+@keyframes berubah {
+  0%, 100% { background-color: rgb(137, 39, 197); }
+  20% { background-color: rgb(82, 8, 128); }
+  40% { background-color: rgb(1, 26, 245); }
+  60% { background-color: rgb(174, 235, 9); }
+  80% { background-color: rgb(236, 17, 28); }
+}
