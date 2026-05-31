@@ -5,7 +5,7 @@ import Footers from "@/components/Footers";
 import Gallery from "@/components/Gallery";
 
 export default function Home() {
-  const kenanganImages = Array.from({ length: 7 }, (_, i) => `/images/foto/${i + 1}.jpg`)
+  const kenanganImages = Array.from({ length: 7 }, (_, i) => `/images/foto_1/${i + 1}.jpg`)
 
   return (
    <main className="relative flex flex-col min-h-screen bg-slate-950 overflow-hidden">
