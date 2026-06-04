@@ -5,7 +5,8 @@ function Video() {
         <div style={{ display:"flex", gap:"20px", justifyContent:"center", flexWrap:"wrap",
             padding:"20px"
          }}>
-
+        
+        <video src="/videos/kenangan.mp4" width={360} height={640} loop autoPlay></video>
         <iframe width="360" height="640"
         src="https://www.youtube.com/embed/_AJmn09a7Xg"
         frameBorder="0"
