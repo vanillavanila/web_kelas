@@ -5,7 +5,7 @@ import Gallery from '@/components/Gallery'
 
 export default function GalleryPage() {
   // Generate array of image paths based on what's available
-  const kenanganImages = Array.from({ length: 10 }, (_, i) => `/images/kenangan/${i + 1}.jpg`)
+  const kenanganImages = Array.from({ length: 13 }, (_, i) => `/images/kenangan/${i + 1}.jpg`)
 
   return (
     <main className="relative flex flex-col min-h-screen bg-slate-950 text-white overflow-hidden">
