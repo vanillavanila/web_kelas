@@ -6,13 +6,13 @@ const cards = [
     title: "Kelas",
     desc: "Informasi tentang siswa XII RPL 2, struktur kelas, dan kegiatan.",
     icon: <Users size={40} />,
-    link: "/kelas",
+    link: "./kelas",
   },
   {
     title: "Pelajaran",
     desc: "Materi yang dipelajari seperti Web Dev, UI/UX, dan Pemrograman.",
     icon: <BookOpenCheck size={40} />,
-    link: "/pelajaran",
+    link: "./pelajaran",
   },
   {
     title: "Random",
