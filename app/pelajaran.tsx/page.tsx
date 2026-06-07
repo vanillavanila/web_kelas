@@ -1,6 +1,6 @@
 import React from 'react'
 
-const pelajaranPage = () => {
+const pelajaran = () => {
   return (
     <div>
       <h1>PELAJARAN DI RPL</h1>
@@ -8,4 +8,4 @@ const pelajaranPage = () => {
   )
 }
 
-export default pelajaranPage
+export default pelajaran
