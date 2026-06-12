@@ -18,7 +18,7 @@ const PageKenangan = () => {
     {id:5, src: foto5, title:'Bagian dari Cerita', size:'md:col-span-1'},
     {id:6, src: foto6, title:'Ini Kami', size:'md:col-span-1'},
     {id:7, src: foto7, title:'Masa Muda yang Kita Jalanin Bareng', size:'md:col-span-1'},
-    {id:8, src: foto8, title:'Cerita yang Belum Selesai', size:'md:col-span-1'}
+    {id:8, src: foto8, title:'Cerita yang Belum Selesai', size:'md:col-span-3'}
   ]
 
   return (
