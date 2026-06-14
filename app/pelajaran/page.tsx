@@ -131,7 +131,6 @@ const pelajaranPage = () => {
             ))}
           </div>
 
-          {/* FIX MODAL SILABUS UNTUK HP */}
           {selectPelajaran && (
             <div 
               className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 backdrop-blur-sm overscroll-none"
@@ -158,7 +157,6 @@ const pelajaranPage = () => {
                   </button>
                 </div>
 
-                {/* 2. BODY KONTEN (Bisa di-scroll di HP jika layarnya pendek) */}
                 <div className="p-4 sm:p-6 overflow-y-auto flex-grow bg-slate-900/40 space-y-4">
                   <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                     {selectPelajaran.deskripsi}
@@ -168,12 +166,13 @@ const pelajaranPage = () => {
                     <img 
                       src={selectPelajaran.detailSilubus} 
                       alt="silabus" 
-                      className="max-w-full h-auto max-h-[40vh] object-contain" 
+                       width={500}     
+                      height={350}    
+                      className="object-contain max-w-full h-auto"
                     />
                   </div>
                 </div>
 
-                {/* 3. FOOTER MODAL (Tombol Tutup Bawah yang Lebar & Mudah Ditekan Jari) */}
                 <div className="px-5 py-3.5 bg-slate-800 border-t border-slate-700/50 flex justify-end shrink-0">
                   <button 
                     onClick={() => setPelajaran(null)}
