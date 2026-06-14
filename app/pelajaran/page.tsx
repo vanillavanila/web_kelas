@@ -1,7 +1,12 @@
+'use client'
 import { icons } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react';
+import Image from 'next/image';
 
 const pelajaranPage = () => {
+  
+  const [selectPelajaran, setPelajaran] = useState(null);
+
   const daftarPelajaran = [
   {
     id: 1,
@@ -14,6 +19,7 @@ const pelajaranPage = () => {
       { nama: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
       { nama: 'Laravel Framework', url: 'https://laravel.com/' }
     ],
+    detailSilubus: '/images/silabus/2.svg',
     icon: '🌐',
     warna: 'from-blue-500 to-indigo-600'
   },
@@ -27,6 +33,7 @@ const pelajaranPage = () => {
       { nama: 'Figma Tools', url: 'https://www.figma.com/resource-library/design-basics/' },
       { nama: 'Laws of UX', url: 'https://lawsofux.com/' }
     ],
+     detailSilubus:'/images/silabus/1.svg',
     icon: '🎨',
     warna: 'from-pink-500 to-rose-600'
   },
@@ -41,6 +48,7 @@ const pelajaranPage = () => {
     { nama: 'Struktur Data', url: 'https://www.geeksforgeeks.org/data-structures/' },
     { nama: 'Git & GitHub', url: 'https://www.w3schools.com/git/' }
     ],
+    detailSilubus:'/images/silabus/4.svg',
     icon: '💻',
     warna: 'from-emerald-500 to-teal-600'
   },
@@ -54,6 +62,7 @@ const pelajaranPage = () => {
       { nama: 'Query MySQL', url: 'https://dev.mysql.com/doc/' },
       { nama: 'Normalisasi Data', url: 'https://www.geeksforgeeks.org/normal-forms-in-dbms/' }
     ],
+     detailSilubus:'/images/silabus/3.svg',
     icon: '🗄️',
     warna: 'from-amber-500 to-orange-600'
   }
@@ -110,13 +119,50 @@ const pelajaranPage = () => {
                 </div>
               </div>
               <div className="px-6 pb-6 pt-2 border-t border-slate-50">
-                <button className="w-full text-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors py-2 rounded-lg bg-indigo-50 hover:bg-indigo-100">
-                  Lihat Detail Silabus →
+                <button
+                  onClick={() => setPelajaran(pelajaran)}
+                  className="w-full cursor-pointer text-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors py-2 rounded-lg bg-indigo-50 hover:bg-indigo-100">
+                    Lihat Detail Silabus →
                 </button>
               </div>
             </div>
           ))}
         </div>
+
+        {/* modal silubus */}
+        {selectPelajaran && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
+            <div className="bg-slate-800 border border-slate-700 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+              <div className={`bg-gradient-to-r ${selectPelajaran.warna} p-6 text-white flex justify-between items-start`}>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-widest bg-black/20 px-2.5 py-1 rounded-full">
+                  Silabus Detail • {selectPelajaran.kategori}
+                </span>
+                <h3 className="text-2xl font-bold mt-2">{selectPelajaran.judul}</h3>
+                <div className="p-6 flex flex-col items-center justify-center bg-slate-900/50">
+                  <div className="bg-white p-4 rounded-xl shadow-md w-full flex justify-center">
+                    <Image 
+                      src={selectPelajaran.detailSilubus} 
+                      alt="silabus" 
+                      width={500}     
+                      height={350}    
+                      priority      
+                      className="object-contain max-w-full h-auto" 
+                    />
+                  </div>
+                  <br />
+                  <button 
+                    onClick={() => setPelajaran(null)}
+                    className="bg-black/20 hover:bg-black/40 text-white w-20 h-8 rounded-full flex items-center justify-center font-bold transition-colors cursor-pointer"
+                  >
+                    Tutup
+                  </button>
+                </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
      </div>
     </div>
