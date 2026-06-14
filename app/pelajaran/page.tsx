@@ -122,7 +122,7 @@ const pelajaranPage = () => {
                 <div className="px-6 pb-6 pt-2 border-t border-slate-50">
                   <button
                     onClick={() => setPelajaran(pelajaran)}
-                    className="w-full cursor-pointer text-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors py-2 rounded-lg bg-indigo-50 hover:bg-indigo-100"
+                    className="w-full cursor-pointer text-center text-sm font-semibold text-red-900 hover:text-indigo-800 transition-colors py-2 rounded-lg bg-indigo-50 hover:bg-indigo-100"
                   >
                     Lihat Detail Silabus →
                   </button>
