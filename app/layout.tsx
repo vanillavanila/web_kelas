@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Website Kelas XII RPL 2",
+  title: "<Website Kelas XII RPL 2 />",
   description: "Website Sederhana Yang Kaya Akan Kenangan",
 };
 
@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+         <link rel="icon" type="image/svg+xml" href="/images/logo.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

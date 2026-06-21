@@ -191,4 +191,4 @@ const pelajaranPage = () => {
   )
 }
 
-export default pelajaranPage;
+export default pelajaranPage;// pancingan git

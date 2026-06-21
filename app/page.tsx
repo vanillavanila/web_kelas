@@ -1,3 +1,5 @@
+'use client'
+import React, {useEffect} from "react";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -6,7 +8,6 @@ import Gallery from "@/components/Gallery";
 
 export default function Home() {
   const kenanganImages = Array.from({ length: 7 }, (_, i) => `/images/foto_2/${i + 1}.jpg`)
-
   return (
    <main className="relative flex flex-col min-h-screen bg-slate-950 overflow-hidden">
      <Navbar />
